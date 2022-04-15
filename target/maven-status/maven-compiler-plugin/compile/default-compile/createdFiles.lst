@@ -1,0 +1,7 @@
+Main.class
+cn\ac\hzj\httprequest\HttpRequestEvent.class
+cn\ac\hzj\httprequest\HttpHeaderBuilder.class
+cn\ac\hzj\httprequest\HttpRequest.class
+cn\ac\hzj\httprequest\HttpResponse.class
+cn\ac\hzj\httprequest\HttpBodyBuilder.class
+cn\ac\hzj\httprequest\HttpMapBuilder.class
