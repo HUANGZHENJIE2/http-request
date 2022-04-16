@@ -110,6 +110,8 @@ import cn.ac.hzj.httprequest.HttpRequest;
 HttpRequest.get("https://www.baidu.com").download("./","index.html");
 ....
 ```
+Tips: 获取文本用getContext()，转为java类型用fromJson，保存结果用dowload(),其他的POST、DELTE、PUT 都适用，转换为JAVA类型时响应结果必须是JSON！一定要是JSON。
+
 ### v1.1 
 实现了主干功能
 ## 鸣谢
