@@ -25,6 +25,15 @@
 ```
 ## 快速使用
 ### http get请求
+1、通过get请求获取文本
+```
+import cn.ac.hzj.httprequest.HttpRequest;
+
+....
+String context = HttpRequest.get("https://www.baidu.com").getContext();
+System.out.println(context);
+....
+```
 修复菜单错误
 ### v1.1 
 实现了主干功能
