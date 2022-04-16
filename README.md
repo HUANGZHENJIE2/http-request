@@ -48,6 +48,60 @@ import cn.ac.hzj.httprequest.HttpHeaderBuilder;
 System.out.println(respMap.toString());
 ....
 ```
+2.1 转换为自定累类型
+```
+import cn.ac.hzj.httprequest.HttpRequest;
+import cn.ac.hzj.httprequest.HttpHeaderBuilder;
+....
+class Token {
+    public String message;
+    public String token;
+    public int code;
+
+    public Token(String message, String token, int code) {
+        this.message = message;
+        this.token = token;
+        this.code = code;
+    }
+
+    public Token() {
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+}
+....
+
+ Toeken token = HttpRequest.get("http://localhost:9020/api/v1/token",
+                HttpHeaderBuilder.init().setAccept("application/json").
+                        put("app_key", "0000000002")
+                        .put("app_secret", "BiyplosPxyVP6cvF4Rp7e8TD2TWZQuUG").build()
+                ).fromJson(Toeken.class);
+ System.out.println(token.getToken());
+....
+```
+
 修复菜单错误
 ### v1.1 
 实现了主干功能
