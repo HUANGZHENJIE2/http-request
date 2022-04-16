@@ -111,6 +111,9 @@ HttpRequest.get("https://www.baidu.com").download("./","index.html");
 ....
 ```
 Tips: 获取文本用getContext()，转为java类型用fromJson，保存结果用dowload(),其他的POST、DELTE、PUT 都适用，转换为JAVA类型时响应结果必须是JSON！一定要是JSON。
+使用downlad()，服务响应结国可以是任意类型，只要指定好正确的文明名即可。
+
+
 
 ### v1.1 
 实现了主干功能
