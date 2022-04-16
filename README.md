@@ -48,7 +48,7 @@ import cn.ac.hzj.httprequest.HttpHeaderBuilder;
 System.out.println(respMap.toString());
 ....
 ```
-2.2 转换为自定义类型
+2.2 通过get获取json并转换为自定义类型
 ```
 import cn.ac.hzj.httprequest.HttpRequest;
 import cn.ac.hzj.httprequest.HttpHeaderBuilder;
@@ -102,7 +102,14 @@ class Token {
 ....
 ```
 
-修复菜单错误
+3、get请求数据保存为文件
+```
+import cn.ac.hzj.httprequest.HttpRequest;
+
+....
+HttpRequest.get("https://www.baidu.com").download("./","index.html");
+....
+```
 ### v1.1 
 实现了主干功能
 ## 鸣谢
