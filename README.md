@@ -35,7 +35,7 @@ System.out.println(context);
 ....
 ```
 2、通过get获取json并转换Java 对象  
-2.1 转换为map对象
+2.1 转换为map类型
 ```
 import cn.ac.hzj.httprequest.HttpRequest;
 import cn.ac.hzj.httprequest.HttpHeaderBuilder;
