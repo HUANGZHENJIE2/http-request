@@ -118,9 +118,12 @@ Tips: 获取文本用getContext()，转为java类型用fromJson，保存结果�
 #### 6、 put请求
 #### 7、 delete请求
 #### 8、 自定义其他请求
-### v1.1 
-实现了主干功能
-## 鸣谢
-[xray-core](https://github.com/XTLS/Xray-core)  
-[sysproxy](https://github.com/Noisyfox/sysproxy)  
-
+## API 
+### HttpRequest
+#### static HttpResponse get(String url) throws IOException, NoSuchAlgorithmException, KeyManagementException
+#### static HttpResponse get(String url, Map<String, Object> header) throws IOException, NoSuchAlgorithmException, KeyManagementException
+#### HttpResponse post(String url, Map<String, Object> body) throws IOException
+#### static HttpResponse post(String url, Map<String, Object> header, Map<String, Object> body) throws IOException
+#### static HttpResponse upload(String url, Map<String, Object> body) throws IOException
+#### static HttpResponse upload(String url,Map<String, Object> header, Map<String, Object> body) throws IOException
+#### static HttpResponse request(String url, String method,Map<String, Object> header,Map<String, Object> body,int connectTimeout,int readTimeout,boolean doOutput,boolean doInput, boolean useCaches) throws IOException
