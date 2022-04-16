@@ -126,4 +126,16 @@ Tips: 获取文本用getContext()，转为java类型用fromJson，保存结果�
 #### static HttpResponse post(String url, Map<String, Object> header, Map<String, Object> body) throws IOException
 #### static HttpResponse upload(String url, Map<String, Object> body) throws IOException
 #### static HttpResponse upload(String url,Map<String, Object> header, Map<String, Object> body) throws IOException
+#### static HttpResponse put(String url, Map<String, Object> body) throws IOException 
+#### static HttpResponse put(String url, Map<String, Object> header, Map<String, Object> body) throws IOException 
+#### static HttpResponse delete(String url, Map<String, Object> body) throws IOException
+#### static HttpResponse delete(String url, Map<String, Object> header, Map<String, Object> body) throws IOException
 #### static HttpResponse request(String url, String method,Map<String, Object> header,Map<String, Object> body,int connectTimeout,int readTimeout,boolean doOutput,boolean doInput, boolean useCaches) throws IOException
+### HttpResponse
+#### int ResponseCode
+#### String ResponseMessage
+#### Map<String, List<String>> Headers
+#### public byte[] Body
+#### String getContext() 
+####  <T> T fromJson(Class<T> classOfT) throws JsonSyntaxException
+####  void download(String path, String filename) throws IOException
