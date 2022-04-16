@@ -34,6 +34,20 @@ String context = HttpRequest.get("https://www.baidu.com").getContext();
 System.out.println(context);
 ....
 ```
+2、通过get获取json并转换Java 对象
+2.1 转换为map对象
+```
+import cn.ac.hzj.httprequest.HttpRequest;
+import cn.ac.hzj.httprequest.HttpHeaderBuilder;
+.....
+ Map<String, String> respMap = HttpRequest.get("http://localhost:9020/api/v1/token",
+    HttpHeaderBuilder.init().setAccept("application/json").put("app_key", "0000000002")
+                            .put("app_secret", "BiyplosPxyVP6cvF4Rp7e8TD2TWZQuUG").build()
+    ).fromJson(Map.class);
+        
+System.out.println(respMap.toString());
+....
+```
 修复菜单错误
 ### v1.1 
 实现了主干功能
