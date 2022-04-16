@@ -34,7 +34,7 @@ String context = HttpRequest.get("https://www.baidu.com").getContext();
 System.out.println(context);
 ....
 ```
-2、通过get获取json并转换Java 对象
+2、通过get获取json并转换Java 对象  
 2.1 转换为map对象
 ```
 import cn.ac.hzj.httprequest.HttpRequest;
