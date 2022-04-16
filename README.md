@@ -48,7 +48,7 @@ import cn.ac.hzj.httprequest.HttpHeaderBuilder;
 System.out.println(respMap.toString());
 ....
 ```
-2.1 转换为自定义类型
+2.2 转换为自定义类型
 ```
 import cn.ac.hzj.httprequest.HttpRequest;
 import cn.ac.hzj.httprequest.HttpHeaderBuilder;
