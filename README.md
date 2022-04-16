@@ -142,8 +142,49 @@ HttpRequest.upload(
 ....
 ````
 #### 6、 put请求
+```
+import cn.ac.hzj.httprequest.HttpRequest;
+
+....
+ String result = HttpRequest.put(
+                http://localhost:9020/api/v1/user/001,
+                HttpBodyBuilder.init()
+                        .put("email","hua****@outlook.com")
+                        .put("phone_number", "130****1824").build()
+        ).getContext();
+....
+```
 #### 7、 delete请求
+```
+import cn.ac.hzj.httprequest.HttpRequest;
+
+....
+ String result = HttpRequest.delete(
+                http://localhost:9020/api/v1/user,
+                HttpBodyBuilder.init()
+                        .put("username","001")
+        ).getContext();
+....
+```
 #### 8、 自定义其他请求
+
+```
+import cn.ac.hzj.httprequest.HttpRequest;
+
+....
+  HttpRequest.request(
+  "http://localhost:9020/api/v1/user", 
+  "HEAD", //请求方法
+  HttpHeaderBuilder.init().build(), //初始化header
+  null, //请求体
+  1500, //连接超时时间
+  6000, //读取超时时间
+  false, //是否使用输出流
+  true,  //是否使用输入流
+  false //是否使用缓存
+  ).getContext();
+....
+```
 ## API 
 ### HttpRequest
 #### static HttpResponse get(String url) throws IOException, NoSuchAlgorithmException, KeyManagementException
