@@ -41,8 +41,8 @@ import cn.ac.hzj.httprequest.HttpRequest;
 import cn.ac.hzj.httprequest.HttpHeaderBuilder;
 .....
  Map<String, String> respMap = HttpRequest.get("http://localhost:9020/api/v1/token",
-    HttpHeaderBuilder.init().setAccept("application/json").put("app_key", "0000000002")
-                            .put("app_secret", "BiyplosPxyVP6cvF4Rp7e8TD2TWZQuUG").build()
+    HttpHeaderBuilder.init().setAccept("application/json").put("app_key", "00****002")
+                            .put("app_secret", "****plosPxyVP6c************").build()
     ).fromJson(Map.class);
         
 System.out.println(respMap.toString());
@@ -114,7 +114,33 @@ Tips: 获取文本用getContext()，转为java类型用fromJson，保存结果�
 使用downlad()，服务响应结国可以是任意类型，只要指定好正确的文明名即可。
 
 #### 4、 post请求
+```
+import cn.ac.hzj.httprequest.HttpRequest;
+
+....
+ String result = HttpRequest.post(
+                http://localhost:9020/api/v1/token,
+                HttpBodyBuilder.init()
+                        .put("app_key",app_key)
+                        .put("app_secret", app_secret).build()
+        ).getContext();
+....
+```
 #### 5、 上传文件
+````
+import cn.ac.hzj.httprequest.HttpBodyBuilder;
+import cn.ac.hzj.httprequest.HttpRequest;
+
+....
+HttpRequest.upload(
+                    http://localhost:9020/api/v1/user/,
+                    HttpBodyBuilder.init().putFile("file","./1.img") //可以添加多个文件这里的key相当于from表单inputname，values是文件按路径，可以是相对路径或绝对路径
+                            .put("business_id", "H"+System.currentTimeMillis())
+                            .put("business_name","图片")
+                            .put("token", token).build()
+                    ).getContext();
+....
+````
 #### 6、 put请求
 #### 7、 delete请求
 #### 8、 自定义其他请求
