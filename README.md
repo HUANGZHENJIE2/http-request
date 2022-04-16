@@ -139,3 +139,14 @@ Tips: 获取文本用getContext()，转为java类型用fromJson，保存结果�
 #### String getContext() 
 ####  <T> T fromJson(Class<T> classOfT) throws JsonSyntaxException
 ####  void download(String path, String filename) throws IOException
+### HttpBodyBuilder
+#### static HttpBodyBuilder init()
+#### HttpBodyBuilder putFile(String key, String filepath)
+#### HttpBodyBuilder put(String key, Object value)
+#### Map<String, Object> build()
+### HttpHeaderBuilder
+#### static HttpHeaderBuilder init()
+#### HttpHeaderBuilder setContentType(String value)
+#### HttpHeaderBuilder setAccept(String value)
+#### HttpHeaderBuilder put(String key, Object value)
+#### Map<String, Object> build()
