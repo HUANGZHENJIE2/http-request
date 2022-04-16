@@ -5,14 +5,14 @@
 ## 安装
 ### 1.maven
 ```
-<!--使用httprequest源-->
-<repositories>
-	<repository>
-			<id>github-rich-repo</id>
-			<name>httprequest</name>
-			<url>https://huangzhenjie2.github.io/http-request/maven-repo/</url>
-		</repository>
-</repositories>
+ <!--使用httprequest源-->
+ <repositories>
+   <repository>
+     <id>github-rich-repo</id>
+     <name>httprequest</name>
+     <url>https://huangzhenjie2.github.io/http-request/maven-repo/</url>
+  </repository>
+ </repositories>
  <!--添加依赖-->
  <dependencies>
    <dependency>
